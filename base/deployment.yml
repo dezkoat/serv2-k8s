@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-app
+  name: nodejs-downstream-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodejs-app
+      app: nodejs-downstream-app
   template:
     metadata:
       labels:
-        app: nodejs-app
+        app: nodejs-downstream-app
     spec:
       containers:
-      - name: nodejs-app
-        image: dezkoat13/serv1:v2
+      - name: nodejs-downstream-app
+        image: dezkoat13/serv2:v1
         ports:
         - containerPort: 3000
