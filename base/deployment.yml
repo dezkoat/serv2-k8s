@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nodejs-downstream-v2-app
-        image: dezkoat13/serv2:v2
+        image: dezkoat13/serv2:v3
         ports:
         - containerPort: 3000
