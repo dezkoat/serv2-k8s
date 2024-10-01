@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-downstream-v2-app
+  name: nodejs-downstream-app
 spec:
   replicas: 1
   selector:
@@ -13,7 +13,7 @@ spec:
         app: nodejs-downstream-app
     spec:
       containers:
-      - name: nodejs-downstream-v2-app
-        image: dezkoat13/serv2:v3
+      - name: nodejs-downstream-app
+        image: dezkoat13/serv3:v4
         ports:
         - containerPort: 3000
